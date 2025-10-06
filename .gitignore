@@ -1,3 +1,6 @@
 configstore/
 zed/*
 !zed/settings.json
+
+.DS_Store
+__MACOSX/
