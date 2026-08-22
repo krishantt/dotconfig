@@ -35,7 +35,7 @@ up() {
   brew update && brew upgrade && brew upgrade --cask --greedy && brew cleanup --prune=7
 
   echo "🛠️ Updating mise tools..."
-  mise upgrade 2>&1 | grep -v 'mise WARN.*minimum_release_age'
+  GITHUB_TOKEN="$(gh auth token)" mise upgrade 2>&1 | grep -v 'mise WARN.*minimum_release_age'
 
   echo "🐍 Updating uv tools..."
   uv tool upgrade --all
