@@ -37,6 +37,9 @@ up() {
   echo "🛠️ Updating mise tools..."
   mise upgrade 2>&1 | grep -v 'mise WARN.*minimum_release_age'
 
+  echo "🐍 Updating uv tools..."
+  uv tool upgrade --all
+
   echo "🖥️ Checking for macOS software updates..."
   softwareupdate -ia
 }
