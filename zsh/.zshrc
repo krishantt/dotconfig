@@ -1,6 +1,22 @@
 # secrets/tokens live in ~/.zshrc.local (untracked, not in dotconfig)
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
 
+export PATH="$HOME/.cargo/bin:/opt/homebrew/bin:$PATH"
+export PATH="/Users/krishtimil/.local/bin:$PATH"
+export PATH="/Users/krishtimil/.bun/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/krishtimil/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# mise last so its shims win over anything above (tool versions/replacements)
+eval "$("$HOME/.local/bin/mise" activate zsh)"
+
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
@@ -25,22 +41,6 @@ up() {
 alias al="aws sso login --profile lelapa-readonly"
 alias al-write="aws sso login --profile lelapa"
 
-export PATH="/opt/homebrew/opt/rustup/bin:$HOME/.cargo/bin:/opt/homebrew/bin:$PATH"
-export PATH="/Users/krishtimil/.local/bin:$PATH"
-
-eval "$(fnm env --use-on-cd --shell zsh)"
-
-export PATH="/Users/krishtimil/.bun/bin:$PATH"
-
 if [ -z "$HERDR_ENV" ] && { [ "$TERM_PROGRAM" = "ghostty" ] || [ -n "$KITTY_WINDOW_ID" ]; }; then
   herdr
 fi
-
-# pnpm
-export PNPM_HOME="/Users/krishtimil/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME/bin:"*) ;;
-  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
-esac
-# pnpm end
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"

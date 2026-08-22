@@ -1,0 +1,13 @@
+# CLI tools installed via `uv tool install`, one pip-style spec per line.
+# Python tools always go here rather than mise or brew.
+#
+# Bootstrap: handled by bootstrap.sh (filters out these comments first)
+# Regenerate: uv tool list | awk '{print $1}' | grep -v '^-' > uv/tools.txt (then fix versions/extras by hand)
+
+azure-cli
+graphifyy
+huggingface_hub[cli]
+pdm
+pre-commit
+ruff
+terravision
