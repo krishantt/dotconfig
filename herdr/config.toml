@@ -9,3 +9,19 @@ delivery = "herdr"
 [theme]
 name = "catppuccin"
 auto_switch = false
+
+# Git diff/status/log viewer as a session-modal popup.
+[[keys.command]]
+key = "prefix+alt+g"
+type = "popup"
+command = "lazygit"
+width = "80%"
+height = "80%"
+
+# File explorer as a session-modal popup.
+[[keys.command]]
+key = "prefix+alt+f"
+type = "popup"
+command = "yazi"
+width = "80%"
+height = "80%"
