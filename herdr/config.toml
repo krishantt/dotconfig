@@ -1,0 +1,11 @@
+onboarding = false
+
+[ui]
+hide_tab_bar_when_single_tab = true
+
+[ui.toast]
+delivery = "herdr"
+
+[theme]
+name = "catppuccin"
+auto_switch = false

@@ -1,6 +1,0 @@
-theme = Argonaut
-font-size = 18
-macos-titlebar-style = tabs
-window-height = 20
-window-width = 90
-shell-integration-features = ssh-env, ssh-terminfo

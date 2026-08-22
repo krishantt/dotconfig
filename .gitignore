@@ -1,6 +1,24 @@
+.DS_Store
+__MACOSX/
+
+ghostty/
+htop/
+
+# app state / cache / credentials — not portable config
 configstore/
+flutter/
+gcloud/
+github-copilot/
+raycast/
+bws/
+argocd/
+secure-fl/
+
 zed/*
 !zed/settings.json
 
-.DS_Store
-__MACOSX/
+herdr/*
+!herdr/config.toml
+
+kitty/*.bak
+kitty/*.bak.*

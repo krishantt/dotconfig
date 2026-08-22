@@ -1,0 +1,4 @@
+# Always start kitty in fullscreen.
+# Referenced by startup_session in kitty.conf.
+os_window_state fullscreen
+launch
