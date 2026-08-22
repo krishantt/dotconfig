@@ -34,6 +34,9 @@ up() {
   echo "🔄 Updating Homebrew..."
   brew update && brew upgrade && brew upgrade --cask --greedy && brew cleanup --prune=7
 
+  echo "🛠️ Updating mise tools..."
+  mise upgrade
+
   echo "🖥️ Checking for macOS software updates..."
   softwareupdate -ia
 }
