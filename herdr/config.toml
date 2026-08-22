@@ -10,6 +10,11 @@ delivery = "herdr"
 name = "catppuccin"
 auto_switch = false
 
+[keys]
+# New git worktree workspace, direct chord instead of the default
+# two-step "prefix+shift+g".
+new_worktree = "alt+w"
+
 # Git diff/status/log viewer as a session-modal popup.
 # Direct alt+key chord (no prefix step). Runs through an interactive
 # zsh so .zshrc (mise activate) puts mise-installed tools like lazygit
