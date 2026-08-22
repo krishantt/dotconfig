@@ -24,21 +24,21 @@ new_worktree = "alt+w"
 key = "alt+g"
 type = "popup"
 command = "zsh -ic lazygit"
-width = "80%"
-height = "80%"
+width = "90%"
+height = "90%"
 
 # File explorer as a session-modal popup. Same reasoning as above.
 [[keys.command]]
 key = "alt+f"
 type = "popup"
 command = "zsh -ic yazi"
-width = "80%"
-height = "80%"
+width = "90%"
+height = "90%"
 
 # Code editor (neovim) as a session-modal popup. Same reasoning as above.
 [[keys.command]]
 key = "alt+c"
 type = "popup"
-command = "zsh -ic nvim"
-width = "80%"
-height = "80%"
+command = "zsh -ic 'nvim .'"
+width = "90%"
+height = "90%"
