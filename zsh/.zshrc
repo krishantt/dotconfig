@@ -39,6 +39,7 @@ up() {
 
   echo "🐍 Updating uv tools..."
   uv tool upgrade --all
+  uv cache prune
 
   echo "🖥️ Checking for macOS software updates..."
   softwareupdate -ia

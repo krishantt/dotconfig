@@ -11,17 +11,20 @@ name = "catppuccin"
 auto_switch = false
 
 # Git diff/status/log viewer as a session-modal popup.
+# Runs through an interactive zsh so .zshrc (mise activate) puts
+# mise-installed tools like lazygit on PATH; herdr spawns commands
+# directly and does not source shell rc files itself.
 [[keys.command]]
 key = "prefix+alt+g"
 type = "popup"
-command = "lazygit"
+command = "zsh -ic lazygit"
 width = "80%"
 height = "80%"
 
-# File explorer as a session-modal popup.
+# File explorer as a session-modal popup. Same PATH reasoning as above.
 [[keys.command]]
 key = "prefix+alt+f"
 type = "popup"
-command = "yazi"
+command = "zsh -ic yazi"
 width = "80%"
 height = "80%"
