@@ -35,7 +35,7 @@ up() {
   brew update && brew upgrade && brew upgrade --cask --greedy && brew cleanup --prune=7
 
   echo "🛠️ Updating mise tools..."
-  mise upgrade
+  mise upgrade 2>&1 | grep -v 'mise WARN.*minimum_release_age'
 
   echo "🖥️ Checking for macOS software updates..."
   softwareupdate -ia
